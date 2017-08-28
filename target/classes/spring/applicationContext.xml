@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <bean class="com.hhq.hq.HqSpringDI.Hello" id="hello">
+        <property name="name" value="小花"></property>
+    </bean>
+
+    <bean class="com.hhq.hq.HqSpringDI.HqTeacher" id="hqTeacher"></bean>
+    <bean class="com.hhq.hq.HqSpringDI.HqStudent" id="hqStudent"></bean>
+    <!--构造器注入,ref引用一个bean-->
+    <bean class="com.hhq.hq.HqSpringDI.HqPerson" id="hqPerson">
+        <constructor-arg ref="hqStudent">
+        </constructor-arg>
+    </bean>
+
+    <!--属性注入,ref引用一个bean-->
+    <bean class="com.hhq.hq.HqSpringDI.HqSchool" id="hqSchool">
+        <!--<property name="teacher" ref="hqTeacher"></property>-->
+        <property name="teacher">
+            <ref bean="hqTeacher"></ref>
+        </property>
+    </bean>
+
+
+    <!-- scan the package and the sub package -->
+    <context:component-scan base-package="com.hhq.hq.web"/>
+
+    <!-- don't handle the static resource -->
+    <mvc:default-servlet-handler />
+
+    <!-- if you use annotation you must configure following setting -->
+    <mvc:annotation-driven />
+
+    <!-- configure the InternalResourceViewResolver -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          id="internalResourceViewResolver">
+        <!-- 前缀 -->
+        <property name="prefix" value="/WEB-INF/views/" />
+        <!-- 后缀 -->
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+</beans>
