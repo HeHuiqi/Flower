@@ -3,10 +3,13 @@ package com.hhq.hq.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 
 @Controller
 @RequestMapping(value = "/flower")
@@ -27,5 +30,16 @@ public class HomeController {
             e.printStackTrace();
         }
     }
+
+    @RequestMapping(value = "/time")
+    public ModelAndView login(){
+
+        System.out.println("time");
+        ModelAndView model = new ModelAndView("time");
+        model.addObject("time", new Date());
+        model.getModel().put("name", "小花");
+        return model;
+    }
+
 }
 
