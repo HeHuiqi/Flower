@@ -2,7 +2,7 @@ package com.hhq.hq.HqData;
 
 public class HqUser {
 
-    private int id;
+    private long userId;
     private  String username;
     private  String password;
 
@@ -32,12 +32,11 @@ public class HqUser {
         this.age = age;
     }
 
-    public int getId() {
-        return id;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
-
 }

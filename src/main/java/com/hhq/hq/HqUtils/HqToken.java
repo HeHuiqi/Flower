@@ -63,14 +63,28 @@ public class HqToken {
      * @param <T>
      * @return
      */
-    public static <T> T unsign(String token, Class<T> classT) throws IOException {
-        JWTVerifier verifier = JWT.require(Algorithm.HMAC256(SECRET)).build();
-        DecodedJWT jwt = verifier.verify(token);
+    public static <T> T unsign(String token, Class<T> classT)  {
+        JWTVerifier verifier = null;
+        try {
+            verifier = JWT.require(Algorithm.HMAC256(SECRET)).build();
+        } catch (UnsupportedEncodingException e) {
 
-        Date exp = jwt.getExpiresAt();
-        if(exp!=null&&exp.after(new Date())){
-            String subject = jwt.getSubject();
-            return mapper.readValue(subject, classT);
+            e.printStackTrace();
+            return null;
+        }
+
+        try {
+            DecodedJWT jwt = verifier.verify(token);
+
+            Date exp = jwt.getExpiresAt();
+            if(exp!=null&&exp.after(new Date())){
+                String subject = jwt.getSubject();
+                return mapper.readValue(subject, classT);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+
+            return null;
         }
 
         return null;
