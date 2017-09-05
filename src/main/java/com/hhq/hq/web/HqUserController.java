@@ -13,12 +13,14 @@ import java.util.Map;
 
 //RESTFul风格的
 @RestController
+
 @RequestMapping(value = "/flower")
 public class HqUserController {
 
 
     @ResponseBody//会将返回的对象解析为json格式返回
     @RequestMapping(value = "/user",method = RequestMethod.GET)
+
     public HqUser getUserInfo(@RequestParam("userId") long userId){
 
         HqUser user = new HqUser();

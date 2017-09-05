@@ -1,5 +1,6 @@
 package com.hhq.hq.HqConfig;
 
+//import com.mangofactory.swagger.configuration.SpringSwaggerConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -27,6 +28,7 @@ public class HqWebConfig extends WebMvcConfigurerAdapter{
         return resolver;
     }
 
+
     /** 配置静态资源的处理 */
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -45,8 +47,16 @@ public class HqWebConfig extends WebMvcConfigurerAdapter{
         InterceptorRegistration tokenRegistration = registry.addInterceptor(userTokenInterceptor);
         //设置不拦截的url
         tokenRegistration.excludePathPatterns("/flower/login","/flower/register","/");
-//        //添加拦截的url
+        //添加拦截的url
         tokenRegistration.addPathPatterns("/flower/*");
 
+    }
+
+
+    //添加静态资源位置
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+
+//         registry.addResourceHandler("/swagger/**").addResourceLocations("/WEB-INF/swagger/");
     }
 }

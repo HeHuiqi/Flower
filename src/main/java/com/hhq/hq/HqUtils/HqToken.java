@@ -77,6 +77,7 @@ public class HqToken {
             DecodedJWT jwt = verifier.verify(token);
 
             Date exp = jwt.getExpiresAt();
+
             if(exp!=null&&exp.after(new Date())){
                 String subject = jwt.getSubject();
                 return mapper.readValue(subject, classT);

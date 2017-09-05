@@ -3,8 +3,7 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-
+  <display-name>Flower</display-name>
 
     <!--如果有Java配置就不用xml配置-->
     <!--configure the setting of springmvcDispatcherServlet and configure the mapping
@@ -17,12 +16,16 @@
         </init-param>
        <load-on-startup>1</load-on-startup>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-    -->
+ -->
 
+    <!--注册监听器
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+   -->
 
 </web-app>

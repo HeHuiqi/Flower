@@ -23,6 +23,7 @@ public class HqWebInitializer extends AbstractAnnotationConfigDispatcherServletI
         return new Class[]{HqWebConfig.class};// 指定配置类
     }
 
+
     /**
      * 将一个或多个路径映射到DispatcherServlet上
      */
