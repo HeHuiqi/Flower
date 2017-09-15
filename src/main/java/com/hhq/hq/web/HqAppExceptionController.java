@@ -10,6 +10,7 @@ import java.util.Map;
 @ControllerAdvice
 public class HqAppExceptionController {
 
+
     @ResponseBody
     @ExceptionHandler(Exception.class)
     public Map dealException(){
