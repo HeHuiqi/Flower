@@ -12,6 +12,7 @@ public class HqWebInitializer extends AbstractAnnotationConfigDispatcherServletI
     protected Class<?>[] getRootConfigClasses() {
 
         return new Class[]{HqRootConfig.class};
+//        return null;
     }
     /**
      * 当DispatcherServlet启动的时候，它会创建Spring应用上下文，并加载配置文件或配置类中所声明的Bean。

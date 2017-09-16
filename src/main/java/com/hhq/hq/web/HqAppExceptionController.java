@@ -13,11 +13,14 @@ public class HqAppExceptionController {
 
     @ResponseBody
     @ExceptionHandler(Exception.class)
-    public Map dealException(){
+    public Map dealException(Exception e){
 
+        System.out.println("出现异常信息: "+this.getClass().getName()+" method: "+
+                Thread.currentThread().getStackTrace()[1].getMethodName() +" line:"+
+                Thread.currentThread().getStackTrace()[1].getLineNumber());
         Map deal = new HashMap();
         deal.put("status","0");
-        deal.put("message","出错了");
+        deal.put("message",e.getLocalizedMessage());
 
         return deal;
     }
