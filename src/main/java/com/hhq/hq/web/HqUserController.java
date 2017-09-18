@@ -59,6 +59,7 @@ public class HqUserController {
     public HqResponseEntity userLogin(@RequestBody HqUser user){
         HqResponseEntity responseEntity = HqResponseEntity.ok();
 
+         System.out.println("login===");
         System.out.println("user:"+user.getUserId()+","+user.getPassword());
 
         if("123456".equals(""+user.getUserId()) && "admin".equals(user.getPassword())) {

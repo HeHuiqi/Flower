@@ -14,10 +14,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class HqWebConfig extends WebMvcConfigurerAdapter{
 
 
-//    public static void main(String[] args) {
-//        SpringApplication.run(HqWebConfig.class, args);
-//    }
-
     /** 视图解析器 */
     @Bean
     public ViewResolver viewResolver(){
@@ -40,6 +36,7 @@ public class HqWebConfig extends WebMvcConfigurerAdapter{
     public void addInterceptors(InterceptorRegistry registry) {
 
         HqInterceptor hqInterceptor = new HqInterceptor();
+        //添加拦截的url
         registry.addInterceptor(hqInterceptor).addPathPatterns("/","/flower/home");
 
         HqUserTokenInterceptor userTokenInterceptor = new HqUserTokenInterceptor();
