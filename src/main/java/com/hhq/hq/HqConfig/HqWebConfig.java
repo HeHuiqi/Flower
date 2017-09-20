@@ -35,18 +35,19 @@ public class HqWebConfig extends WebMvcConfigurerAdapter{
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
+        /*
         HqInterceptor hqInterceptor = new HqInterceptor();
         //添加拦截的url
         registry.addInterceptor(hqInterceptor).addPathPatterns("/","/flower/home");
 
-        HqUserTokenInterceptor userTokenInterceptor = new HqUserTokenInterceptor();
 
+        HqUserTokenInterceptor userTokenInterceptor = new HqUserTokenInterceptor();
         InterceptorRegistration tokenRegistration = registry.addInterceptor(userTokenInterceptor);
         //设置不拦截的url
         tokenRegistration.excludePathPatterns("/flower/login","/flower/register","/");
         //添加拦截的url
         tokenRegistration.addPathPatterns("/flower/*");
-
+        */
     }
 
 

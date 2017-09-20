@@ -57,6 +57,12 @@
             <version>3.4</version>
         </dependency>
 
+        <!--mysql-mybatis-mybatis_spring-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.10.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -72,17 +78,6 @@
             <artifactId>mybatis-spring</artifactId>
             <version>1.3.1</version>
         </dependency>
-
-
-
-
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-
 
 
         <!--json-Model-->
@@ -142,5 +137,15 @@
 
   <build>
     <finalName>Flower</finalName>
+      <resources>
+          <resource>
+              <!--指定资源目录-->
+              <directory>src/main/java/com/hhq/hq/HqMapper/</directory>
+              <filtering>true</filtering>
+              <includes>
+                  <include>*.xml</include>
+              </includes>
+          </resource>
+      </resources>
   </build>
 </project>

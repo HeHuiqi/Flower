@@ -2,10 +2,14 @@ package com.hhq.hq.web;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.hhq.hq.HqData.HqUser;
+import com.hhq.hq.HqMapper.HqUserMapper;
+import com.hhq.hq.HqService.HqUserServiceImp;
 import com.hhq.hq.HqUtils.HqResponseEntity;
 import com.hhq.hq.HqUtils.HqToken;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -18,24 +22,18 @@ import java.util.Map;
 public class HqUserController {
 
 
+    @Resource
+    private HqUserServiceImp userServiceImp;
+
     @ResponseBody//会将返回的对象解析为json格式返回
     @RequestMapping(value = "/user",method = RequestMethod.GET)
 
-    public HqUser getUserInfo(@RequestParam("userId") long userId){
+    public HqUser getUserInfo(@RequestParam("userId") int userId){
 
-        HqUser user = new HqUser();
-        user.setUserId(userId);;
-        user.setUsername("小明");
+        HqUser user = userServiceImp.getUserById(userId);
         return user;
     }
 
-    @ResponseBody//会将返回的对象解析为json格式返回
-    @RequestMapping(value = "/user",produces = "application/json; charset=utf-8",method = RequestMethod.POST)
-    //@RequestParam会解析请求参数的值
-    public HqUser addUserInfo(@RequestBody HqUser user){
-
-        return user;
-    }
 
     @ResponseBody//会将返回的对象解析为json格式返回
     @RequestMapping(value = "/register",method = RequestMethod.POST)
@@ -43,6 +41,7 @@ public class HqUserController {
     public Map addUser(@RequestBody HqUser user){
 
         System.out.println("object->"+user.getClass());
+
 
         Map resultMap = new HashMap();
         resultMap.put("status","1");
