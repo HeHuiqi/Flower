@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 public class HqUserTokenInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
+        // 获取请求头中的token: token: xxxxxxxxxxxxxx
         String token = request.getHeader("token");
 
 

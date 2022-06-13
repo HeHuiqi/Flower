@@ -12,7 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -33,10 +32,14 @@ public class HqRootConfig {
     public DataSource getDataSource(){
 
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+//        5.7
+//        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+//        8.0
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+
         dataSource.setUrl("jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=UTF-8");
         dataSource.setUsername("root");
-        dataSource.setPassword("xwf123");
+        dataSource.setPassword("h12345678");
         return dataSource;
     }
     //事务管理
@@ -49,16 +52,18 @@ public class HqRootConfig {
 
     }
 
-    @Bean(value = "sqlSessionFactoryBean")
+
+    @Bean(value = "SqlSessionFactoryBean")
     public SqlSessionFactoryBean getSqlSessionFactoryBean(DataSource dataSource){
 
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
-        Resource resource = new ClassPathResource("/mybatis/mybatis-config.xml");
+        Resource resource = new ClassPathResource("mybatis/mybatis-config.xml");
         sqlSessionFactoryBean.setConfigLocation(resource);
 
         return sqlSessionFactoryBean;
     }
+
 
 //    Mapper接口所在包名，Spring会自动查找其下的Mapper
     @Bean
@@ -67,7 +72,8 @@ public class HqRootConfig {
         MapperScannerConfigurer configurer = new MapperScannerConfigurer();
 
         configurer.setBasePackage("com.hhq.hq.HqMapper");
-        configurer.setSqlSessionFactoryBeanName("sqlSessionFactoryBean");
+        configurer.setSqlSessionFactoryBeanName("SqlSessionFactoryBean");
+
         return configurer;
 
     }

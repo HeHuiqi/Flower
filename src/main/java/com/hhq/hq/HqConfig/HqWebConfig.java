@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-
+//@Configuration 注解表明是这个web应用的java配置，相当于webapp下的web.xml
 @Configuration
 @EnableWebMvc // 启用SpringMVC
 @ComponentScan(basePackages = "com.hhq.hq.web") // 启用组件扫描
@@ -40,11 +40,15 @@ public class HqWebConfig extends WebMvcConfigurerAdapter{
         //添加拦截的url
         registry.addInterceptor(hqInterceptor).addPathPatterns("/","/flower/home");
 
+<<<<<<< HEAD
 
+=======
+        // 添加拦截器，并设置拦截的url
+>>>>>>> b2c3619 (update readme)
         HqUserTokenInterceptor userTokenInterceptor = new HqUserTokenInterceptor();
         InterceptorRegistration tokenRegistration = registry.addInterceptor(userTokenInterceptor);
         //设置不拦截的url
-        tokenRegistration.excludePathPatterns("/flower/login","/flower/register","/");
+        tokenRegistration.excludePathPatterns("/flower/home","/flower/time","/flower/food","/flower/login","/flower/register","/");
         //添加拦截的url
         tokenRegistration.addPathPatterns("/flower/*");
         */

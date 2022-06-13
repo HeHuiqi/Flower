@@ -11,6 +11,8 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <mysql.version>8.0.20</mysql.version>
+
     </properties>
     <dependencies>
         <dependency>
@@ -66,7 +68,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.29</version>
+            <version>${mysql.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
