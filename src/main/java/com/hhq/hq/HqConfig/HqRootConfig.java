@@ -78,7 +78,7 @@ public class HqRootConfig {
 
     }
 
-    /*
+
     @Bean
     public SqlSessionTemplate getSqlSessionTemplate(DataSource dataSource){
 
@@ -92,6 +92,5 @@ public class HqRootConfig {
         SqlSessionTemplate template = new SqlSessionTemplate(sqlSessionFactory, ExecutorType.REUSE);
         return template;
     }
-    */
 
 }

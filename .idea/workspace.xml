@@ -23,30 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="925b44b3-fb4d-44db-8942-3dfd503cf5bd" name="Default Changelist" comment="update readme&#10;&#10;# Conflicts:&#10;#&#9;.idea/artifacts/Flower_war_exploded.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;Flower.iml&#10;#&#9;src/main/java/com/hhq/hq/HqConfig/HqWebConfig.java&#10;#&#9;src/main/java/com/hhq/hq/web/HqUserController.java">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dbsource/study.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/安装SmartTomcat插件.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/配置tomcat安装目录.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/项目tomcat配置.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/项目结构设置.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Flower_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Flower_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_20.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flower.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Flower.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqConfig/HqRootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqConfig/HqRootConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqConfig/HqUserTokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqConfig/HqUserTokenInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqConfig/HqWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqConfig/HqWebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqConfig/HqWebInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqConfig/HqWebInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqMapper/HqUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqMapper/HqUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqMapper/HqUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqMapper/HqUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqService/HqUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqService/HqUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqService/HqUserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqService/HqUserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqUtils/HqResponseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqUtils/HqResponseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqUtils/HqToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/HqUtils/HqToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hhq/hq/web/HqUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hhq/hq/web/HqUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +112,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -131,49 +122,64 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="304" y="153" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.936@0.25.1680.936" timestamp="1655034055916" />
-    <state width="1358" height="538" key="GridCell.Tab.0.bottom" timestamp="1655096811081">
+    <state width="1358" height="279" key="GridCell.Tab.0.bottom" timestamp="1655104061134">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="538" key="GridCell.Tab.0.bottom/0.25.1680.936@0.25.1680.936" timestamp="1655096811081" />
-    <state width="1358" height="538" key="GridCell.Tab.0.center" timestamp="1655096811080">
+    <state width="1358" height="279" key="GridCell.Tab.0.bottom/0.25.1680.936@0.25.1680.936" timestamp="1655104061134" />
+    <state width="1358" height="279" key="GridCell.Tab.0.center" timestamp="1655104061132">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="538" key="GridCell.Tab.0.center/0.25.1680.936@0.25.1680.936" timestamp="1655096811080" />
-    <state width="1358" height="538" key="GridCell.Tab.0.left" timestamp="1655096811079">
+    <state width="1358" height="279" key="GridCell.Tab.0.center/0.25.1680.936@0.25.1680.936" timestamp="1655104061132" />
+    <state width="1358" height="279" key="GridCell.Tab.0.left" timestamp="1655104061132">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="538" key="GridCell.Tab.0.left/0.25.1680.936@0.25.1680.936" timestamp="1655096811079" />
-    <state width="1358" height="538" key="GridCell.Tab.0.right" timestamp="1655096811081">
+    <state width="1358" height="279" key="GridCell.Tab.0.left/0.25.1680.936@0.25.1680.936" timestamp="1655104061132" />
+    <state width="1358" height="279" key="GridCell.Tab.0.right" timestamp="1655104061133">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="538" key="GridCell.Tab.0.right/0.25.1680.936@0.25.1680.936" timestamp="1655096811081" />
-    <state width="1358" height="415" key="GridCell.Tab.1.bottom" timestamp="1655095384224">
+    <state width="1358" height="279" key="GridCell.Tab.0.right/0.25.1680.936@0.25.1680.936" timestamp="1655104061133" />
+    <state width="1358" height="327" key="GridCell.Tab.1.bottom" timestamp="1655101595030">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="415" key="GridCell.Tab.1.bottom/0.25.1680.936@0.25.1680.936" timestamp="1655095384224" />
-    <state width="1358" height="415" key="GridCell.Tab.1.center" timestamp="1655095384224">
+    <state width="1358" height="327" key="GridCell.Tab.1.bottom/0.25.1680.936@0.25.1680.936" timestamp="1655101595030" />
+    <state width="1358" height="327" key="GridCell.Tab.1.center" timestamp="1655101595030">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="415" key="GridCell.Tab.1.center/0.25.1680.936@0.25.1680.936" timestamp="1655095384224" />
-    <state width="1358" height="415" key="GridCell.Tab.1.left" timestamp="1655095384224">
+    <state width="1358" height="327" key="GridCell.Tab.1.center/0.25.1680.936@0.25.1680.936" timestamp="1655101595030" />
+    <state width="1358" height="327" key="GridCell.Tab.1.left" timestamp="1655101595029">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="415" key="GridCell.Tab.1.left/0.25.1680.936@0.25.1680.936" timestamp="1655095384224" />
-    <state width="1358" height="415" key="GridCell.Tab.1.right" timestamp="1655095384224">
+    <state width="1358" height="327" key="GridCell.Tab.1.left/0.25.1680.936@0.25.1680.936" timestamp="1655101595029" />
+    <state width="1358" height="327" key="GridCell.Tab.1.right" timestamp="1655101595030">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="415" key="GridCell.Tab.1.right/0.25.1680.936@0.25.1680.936" timestamp="1655095384224" />
-    <state x="378" y="153" key="Maven.ArtifactSearchDialog" timestamp="1655034564870">
+    <state width="1358" height="327" key="GridCell.Tab.1.right/0.25.1680.936@0.25.1680.936" timestamp="1655101595030" />
+    <state x="378" y="153" key="Maven.ArtifactSearchDialog" timestamp="1655099603366">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state x="378" y="153" key="Maven.ArtifactSearchDialog/0.25.1680.936@0.25.1680.936" timestamp="1655034564870" />
+    <state x="378" y="153" key="Maven.ArtifactSearchDialog/0.25.1680.936@0.25.1680.936" timestamp="1655099603366" />
     <state x="401" y="61" key="SettingsEditor" timestamp="1655096584046">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="401" y="61" key="SettingsEditor/0.25.1680.936@0.25.1680.936" timestamp="1655096584046" />
+    <state x="466" y="264" width="597" height="490" key="find.popup" timestamp="1655099512618">
+      <screen x="0" y="25" width="1680" height="936" />
+    </state>
+    <state x="466" y="264" width="597" height="490" key="find.popup/0.25.1680.936@0.25.1680.936" timestamp="1655099512618" />
     <state x="700" y="253" width="670" height="676" key="search.everywhere.popup" timestamp="1655093167547">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="700" y="253" width="670" height="676" key="search.everywhere.popup/0.25.1680.936@0.25.1680.936" timestamp="1655093167547" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hhq/hq/HqService/HqUserServiceImp.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

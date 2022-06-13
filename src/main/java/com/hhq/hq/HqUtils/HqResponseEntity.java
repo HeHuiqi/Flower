@@ -52,12 +52,16 @@ public class HqResponseEntity {
     public static HqResponseEntity unauthorized() {
         return new HqResponseEntity(401, "unauthorized");
     }
+    public static HqResponseEntity tokenExpired() {
+        return new HqResponseEntity(501, "Token has expired");
+    }
+
 
     public static HqResponseEntity serverInternalError() {
         return new HqResponseEntity(500, "Server Internal Error");
     }
 
-    public static HqResponseEntity customerError() {
-        return new HqResponseEntity(1001, "Customer Error");
+    public static HqResponseEntity customerError(int code,String message) {
+        return new HqResponseEntity(code, message);
     }
 }

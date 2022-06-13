@@ -9,6 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface HqUserMapper {
 
-    public HqUser findUser(int userId);
+    public HqUser findUser(long userId);
 
 }

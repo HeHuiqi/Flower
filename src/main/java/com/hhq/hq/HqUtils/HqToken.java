@@ -83,7 +83,8 @@ public class HqToken {
                 return mapper.readValue(subject, classT);
             }
         }catch (Exception e){
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("token 异常："+e.getMessage());
 
             return null;
         }

@@ -9,7 +9,7 @@ import com.hhq.hq.HqUtils.HqToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-//import javax.annotation.Resource;
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -21,15 +21,15 @@ import java.util.Map;
 @RequestMapping(value = "/flower")
 public class HqUserController {
 
-
 //    @Resource
+    @Autowired
     private HqUserServiceImp userServiceImp;
 
     @ResponseBody//会将返回的对象解析为json格式返回
     @RequestMapping(value = "/user",method = RequestMethod.GET)
 
-    public HqUser getUserInfo(@RequestParam("userId") int userId){
-
+    public HqUser getUserInfo(@RequestParam("userId") long userId){
+        System.out.println("userId=="+userId);
         HqUser user = userServiceImp.getUserById(userId);
         return user;
     }
@@ -65,11 +65,12 @@ public class HqUserController {
     public HqResponseEntity userLogin(@RequestBody HqUser user){
         HqResponseEntity responseEntity = HqResponseEntity.ok();
 
-         System.out.println("login===");
+        System.out.println("login===");
         System.out.println("user:"+user.getUserId()+","+user.getPassword());
 
-        if("123456".equals(""+user.getUserId()) && "admin".equals(user.getPassword())) {
-            //模拟用户数据，真实环境需要到数据库验证
+        HqUser dbUser = getUserInfo(user.getUserId());
+
+        if(dbUser.getUserId() == user.getUserId() && dbUser.getPassword().equals(user.getPassword())) {
             HqUser tokenUser = new HqUser();
             tokenUser.setUserId(user.getUserId());
             System.out.println("tokenUserId_=="+user.getUserId());
@@ -77,7 +78,7 @@ public class HqUserController {
             String token = null;
             try {
                 //设置token过期时间，毫秒
-                token = HqToken.sign(tokenUser, 60L * 1000*5);
+                token = HqToken.sign(tokenUser, 60L*1000 * 60 * 72);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             } catch (JsonProcessingException e) {
@@ -89,7 +90,7 @@ public class HqUserController {
             responseEntity.putDataValue("user", tokenUser);
         }
         else{
-            responseEntity =  HqResponseEntity.customerError();
+            responseEntity =  HqResponseEntity.customerError(1011,"用户名ID或密码错误");
         }
 
         return responseEntity;

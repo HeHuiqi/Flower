@@ -3,6 +3,7 @@ package com.hhq.hq.HqConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 //启动tomcat时会自动加载这个类,需要servlet3.0及tomcat7以上环境
+// webapp的入口
 public class HqWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     /**
@@ -12,7 +13,6 @@ public class HqWebInitializer extends AbstractAnnotationConfigDispatcherServletI
     protected Class<?>[] getRootConfigClasses() {
 
         return new Class[]{HqRootConfig.class};
-//        return null;
     }
     /**
      * 当DispatcherServlet启动的时候，它会创建Spring应用上下文，并加载配置文件或配置类中所声明的Bean。

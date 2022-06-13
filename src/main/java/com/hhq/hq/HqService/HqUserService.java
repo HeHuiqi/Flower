@@ -4,5 +4,5 @@ import com.hhq.hq.HqData.HqUser;
 
 public interface HqUserService {
 
-    public HqUser getUserById(int userId);
+    public HqUser getUserById(long userId);
 }
